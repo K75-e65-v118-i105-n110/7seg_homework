@@ -1,0 +1,53 @@
+$date
+   Thu Sep 24 17:07:48 2026
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module method_behavior_tb $end
+$var reg 2 ! bin [1:0] $end
+$var reg 1 " EN $end
+$var wire 7 # seg [6:0] $end
+$scope module u1 $end
+$var wire 2 $ bin [1:0] $end
+$var wire 1 % EN $end
+$var reg 7 & seg [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+1"
+b1000000 #
+b0 $
+1%
+b1000000 &
+$end
+#20000
+b1 !
+b1111001 #
+b1 $
+b1111001 &
+#40000
+b10 !
+b100100 #
+b10 $
+b100100 &
+#60000
+b11 !
+b110000 #
+b11 $
+b110000 &
+#80000
+0"
+b11001 #
+0%
+b11001 &
+#100000
+b0 !
+b0 $
+b11001 &
