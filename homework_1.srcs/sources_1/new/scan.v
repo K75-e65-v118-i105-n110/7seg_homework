@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module scan(    //选位扫描，clk为100MHz，刷新率为250Hz
+module scan #(
+    parameter COUNT_CLK = 10_000
+)
+    (    //选位扫描，clk为100MHz，刷新率为250Hz
     input clk,
     input rst,
     output reg [3:0] pos
@@ -33,7 +36,7 @@ module scan(    //选位扫描，clk为100MHz，刷新率为250Hz
             count <= 14'd0;
             pos <= 4'b1110;
         end
-        else if(count == 14'd10_000) begin //count计数10_000，pos信号循环左移，每秒左移1_000次，刷新率即为250Hz
+        else if(count == COUNT_CLK) begin //count计数10_000，pos信号循环左移，每秒左移1_000次，刷新率即为250Hz
             pos <= {pos[2:0],pos[3]};
             count <= 14'd0;
         end

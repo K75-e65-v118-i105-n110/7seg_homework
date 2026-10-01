@@ -32,31 +32,14 @@ module top_module(
 
     );
 
-    wire [6:0] struct_seg,behavior_seg,assign_seg,seg_out;
+    wire [6:0] seg_out;
 
-    method_struct u1 ( //结构化方法译码
-        .bin(D),
-        .EN(EN),
-        .seg(struct_seg)
-    );
 
-    method_behavior u2 (    //行为级描述译码
-        .bin(D),
-        .EN(EN),
-        .seg(behavior_seg)
-    );
 
-    method_assign u3 (  //数据流描述译码
-        .bin(D),
-        .EN(EN),
-        .seg(assign_seg)
-    );
-
-    module_select u4(   //根据选择开关选择特定的译码方法
+    module_select u4(   //译码并根据选择开关选择特定的译码方法
         .sel(sel),
-        .a_seg(assign_seg),
-        .b_seg(behavior_seg),
-        .s_seg(struct_seg),
+        .EN(EN),
+        .D(D),
         .sel_seg(seg_out)
     );
 

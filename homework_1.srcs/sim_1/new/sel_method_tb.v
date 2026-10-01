@@ -1,44 +1,58 @@
 `timescale 1ns / 1ps
-module sel_method_tb;   //译码方式选择测试
-    reg [6:0] a_seg;
-    reg [6:0] b_seg;
-    reg [6:0] s_seg;
+module sel_method_tb;   //三种译码结果及选择测试
     reg [1:0] sel;
-    wire [6:0] seg;
+    reg EN;
+    reg [1:0] D;
+    wire [6:0] sel_seg;
+    integer i;
 
     module_select u1 (
         .sel(sel),
-        .a_seg(a_seg),
-        .b_seg(b_seg),
-        .s_seg(s_seg),
-        .sel_seg(seg)
+        .EN(EN),
+        .D(D),
+        .sel_seg(sel_seg)
     );
 
     initial begin
         $dumpfile("sel_method_tb.vcd");
         $dumpvars(0,sel_method_tb);
 
-        a_seg = 7'b1000000;
-        b_seg = 7'b0100000;
-        s_seg = 7'b0010000; //用不同的值区分不同译码方式的输出
+        EN = 1'b1;
         sel = 2'b00;
+        D = 2'b00;
+        i = 0;
 
-        #20;
-        sel = 2'b01;
+        for(i = 0; i < 4; i = i +1) begin   //遍历四种选择，在每种选择下，查看不同数据输入的译码正确性
+            #20;
+            D = 2'b01;
 
-        #20;
-        sel = 2'b10;
+            #20;
+            D = 2'b10;
 
-        #20;
-        sel = 2'b11;    //遍历每种选择
+            #20;
+            D = 2'b11;      //遍历数据输入
+
+            #20;
+            EN = 1'b0;      //使能端测试
+
+            #20;
+            D = 2'b00;
+
+            #20;
+            EN = 1'b1;
+
+            #20;
+            sel = sel + 1;
+
+        end
 
         #20;
         $finish;
     end
 
     initial begin
-        $monitor("time%0t a_seg=%d b_seg=%d s_seg=%d sel=%d seg=%d",
-        $time,a_seg,b_seg,s_seg,sel,seg);
+        $monitor("time%0t sel=%d EN=%d D=%d sel_seg=%d",
+        $time,sel,EN,D,sel_seg);
     end
 
 

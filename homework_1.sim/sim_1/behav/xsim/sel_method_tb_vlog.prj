@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../homework_1.srcs/sources_1/new/method_assign.v" \
+"../../../../homework_1.srcs/sources_1/new/method_behavior.v" \
+"../../../../homework_1.srcs/sources_1/new/method_struct.v" \
+"../../../../homework_1.srcs/sources_1/new/module_select.v" \
+"../../../../homework_1.srcs/sim_1/new/sel_method_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
