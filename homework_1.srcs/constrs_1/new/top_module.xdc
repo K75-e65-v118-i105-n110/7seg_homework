@@ -22,13 +22,13 @@ set_property PACKAGE_PIN U8 [get_ports {seg[2]}]
 set_property PACKAGE_PIN W6 [get_ports {seg[1]}]
 set_property PACKAGE_PIN W7 [get_ports {seg[0]}]
 set_property PACKAGE_PIN V17 [get_ports EN]
-set_property PACKAGE_PIN U2 [get_ports pos]
+set_property PACKAGE_PIN W16 [get_ports {sel[1]}]
+set_property PACKAGE_PIN V16 [get_ports {sel[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {sel[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sel[0]}]
 set_property PACKAGE_PIN W13 [get_ports CE]
-set_property PACKAGE_PIN V16 [get_ports {sel[1]}]
-set_property PACKAGE_PIN W16 [get_ports {sel[0]}]
+
 set_property IOSTANDARD LVCMOS33 [get_ports CE]
 
 set_property PACKAGE_PIN U2 [get_ports {pos[0]}]

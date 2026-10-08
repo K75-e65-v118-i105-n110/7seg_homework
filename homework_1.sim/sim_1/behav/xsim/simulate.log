@@ -1,0 +1,25 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+time=0 clk=0 rst=0 seled_seg= 41 CE=1 pos= x seg= 63
+time=5000 clk=1 rst=0 seled_seg= 41 CE=1 pos= x seg= 63
+time=10000 clk=0 rst=0 seled_seg= 41 CE=1 pos= x seg= 63
+time=15000 clk=1 rst=0 seled_seg= 41 CE=1 pos= x seg= 63
+time=20000 clk=0 rst=1 seled_seg= 41 CE=1 pos= x seg= 63
+time=25000 clk=1 rst=1 seled_seg= 41 CE=1 pos=14 seg= 41
+time=30000 clk=0 rst=1 seled_seg= 41 CE=1 pos=14 seg= 41
+time=35000 clk=1 rst=1 seled_seg= 41 CE=1 pos=14 seg= 41
+time=40000 clk=0 rst=0 seled_seg= 41 CE=1 pos=14 seg= 41
+time=45000 clk=1 rst=0 seled_seg= 41 CE=0 pos=14 seg= 63
+time=50000 clk=0 rst=0 seled_seg= 41 CE=1 pos=14 seg= 41
+time=55000 clk=1 rst=0 seled_seg= 41 CE=1 pos=13 seg= 63
+time=60000 clk=0 rst=0 seled_seg= 41 CE=1 pos=13 seg= 63
+time=65000 clk=1 rst=0 seled_seg= 41 CE=1 pos=13 seg= 63
+time=70000 clk=0 rst=0 seled_seg= 41 CE=1 pos=13 seg= 63
+time=75000 clk=1 rst=0 seled_seg= 41 CE=1 pos=11 seg= 63
+time=80000 clk=0 rst=0 seled_seg= 41 CE=1 pos=11 seg= 63
+time=85000 clk=1 rst=0 seled_seg= 41 CE=1 pos=11 seg= 63
+time=90000 clk=0 rst=0 seled_seg= 41 CE=1 pos=11 seg= 63
+time=95000 clk=1 rst=0 seled_seg= 41 CE=1 pos= 7 seg= 63
+time=100000 clk=0 rst=0 seled_seg= 41 CE=1 pos= 7 seg= 63
+time=105000 clk=1 rst=0 seled_seg= 41 CE=1 pos= 7 seg= 63
+$finish called at time : 110 ns : File "D:/FPGA/homework_1/homework_1.srcs/sim_1/new/scan_out_tb.v" Line 47
